@@ -1,3 +1,3 @@
 # Riser-OS
-![Pong (1)](https://github.com/user-attachments/assets/3c75f93d-e352-49d6-b192-5f880659be68)
+![riseros](https://github.com/user-attachments/assets/f69c9a91-e338-4086-9198-8ad4c7d9aede)
 A Minimal yet powerful OS from scratch.
