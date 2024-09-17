@@ -18,7 +18,7 @@ print_string:
 .done:
     ret
 
-hello_msg db 'Hello, World!', 0
+hello_msg db 'github/chauhansumitdev', 0
 
 times 510-($-$$) db 0
 dw 0xAA55
