@@ -1,0 +1,9 @@
+architecture - x86
+legacy boot -
+    loads the first sector of each bootable device in mem @0x7c00
+    bios check for signature
+    if found starts executing the code 
+efi boot -
+    looks for a special efi partitions
+    for this the os needs to be compiled as an Efi prog
+
