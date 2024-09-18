@@ -31,6 +31,45 @@
             <div class="article">
                 <h3>x86 ISA</h3>
                 <p>
+                    General executin cycle of -> fetch decode and execute. <br>
+                    Three modes of operation -> real, protected and system management mode] <br>
+                    real mode is the 16 bit mode and the protected is the 32 bit mode with restrictions to the direct access to resources whereas real mode has no restrictions. <br>
+                    registers: <br>
+                    general purpose : <p>
+                    <pre>
+                        eax
+                        ebx
+                        ecx 
+                        edx 
+
+                        ebp
+                        esp 
+                        esi 
+                        edi 
+                    </pre><br>
+                    <p>
+                    the top 4 allow 8bit 16 bit and 32 bit access like eax has 16 bit ax further the lower and higher bytes are ah and al.
+                        the lower four allow 16 and 32 only -- 16 bit -> si di bp sp <br>
+                     16 bit registers:
+                     </p>
+                     <pre>
+                        cs
+                        ds
+                        es
+                        fs 
+                        gs
+                        ss
+                     </pre><br>
+                     <p>
+                     other registers are flags stack-pointer program counter <br>
+                    One thing to note here is that these register may serve a specific purpose as defined eg eax for multiplication and division therefore also known as extended accumulator. 
+                    <br>
+
+                    ... writing more
+                    </p>
+
+
+                    
                 </p>
                 <a href="../index.html#assembly">Back</a>
             </div>
