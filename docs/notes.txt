@@ -1,4 +1,4 @@
-want to read things more structurally goto -> 
+want to read things more structurally goto -> https://chauhansumitdev.github.io/riser-OS/
 
 architecture - x86
 legacy boot -
