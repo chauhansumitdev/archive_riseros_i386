@@ -142,7 +142,8 @@ nav ul li a:hover {
     padding: 1.5rem;
     margin: 1.5rem 0;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-width: 5px;
 }
 
 .article h3 {
@@ -157,7 +158,7 @@ nav ul li a:hover {
 }
 
 .article a:hover {
-    text-decoration: underline;
+    color: #f4b400;
 }
 
 footer {
@@ -165,9 +166,20 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
 }
 
 footer p {
     font-size: 14px;
+}
+
+.link{
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.link:hover{
+    color: #f4b400;
+
 }
