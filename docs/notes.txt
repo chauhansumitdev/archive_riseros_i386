@@ -1,3 +1,5 @@
+want to read things more structurally goto -> 
+
 architecture - x86
 legacy boot -
     loads the first sector of each bootable device in mem @0x7c00
