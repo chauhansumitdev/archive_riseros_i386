@@ -1,8 +1,9 @@
 # Riser-OS
+![status: 200](https://img.shields.io/badge/status-paused-yellow)
+![status: 200](https://img.shields.io/badge/environment-windows-blue)
 
-![banner_disp](https://github.com/user-attachments/assets/39fd4c2a-0889-42c2-a568-0af93b71b8d5)
+![riser_lang (2)](https://github.com/user-attachments/assets/556eafef-ee33-47fc-a095-f3917c8e3e56)
 
 <!-- ![riseros](https://github.com/user-attachments/assets/5ed93375-26ba-4e14-aea2-3c5fde31d186) -->
-> Expected Completion : Aug - 2025.
 
 
