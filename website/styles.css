@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'riseros';
-    src: url('font.TTF')format('truetype');
+    font-family: 'gnu';
+    src: url('font.ttf')format('truetype');
 }
 
 * {
     margin: 0;
-    font-family:'riseros';
+    font-family:'gnu';
     line-height: 30px;
     padding: 0;
     box-sizing: border-box;
