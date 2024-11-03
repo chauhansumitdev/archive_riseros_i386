@@ -1,6 +1,6 @@
 # Riser-OS
 ![status: 200](https://img.shields.io/badge/status-paused-yellow)
-![status: 200](https://img.shields.io/badge/environment-windows-blue)
+![status: 200](https://img.shields.io/badge/environment-x86-blue)
 
 ![riser_lang (2)](https://github.com/user-attachments/assets/556eafef-ee33-47fc-a095-f3917c8e3e56)
 
