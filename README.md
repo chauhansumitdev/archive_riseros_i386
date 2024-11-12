@@ -9,5 +9,7 @@
 
 > Test command - qemu-system-i386 -cdrom build/os.iso
 
-
+### updates_
+`12 Nov 2024`
+![riser_os](gallery/hello.png)
 
