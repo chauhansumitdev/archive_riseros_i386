@@ -1,6 +1,5 @@
 # Riser-OS
 ![status: 200](https://img.shields.io/badge/status-active-green)
-![status: 200](https://img.shields.io/badge/exec_environment-x86-white)
 ![status: 200](https://img.shields.io/badge/dev_environment-linux-blue)
 
 ![riser_lang (2)](https://github.com/user-attachments/assets/556eafef-ee33-47fc-a095-f3917c8e3e56)
@@ -12,6 +11,8 @@
 [Everything is documented here! 🔗](https://chauhansumitdev.github.io/riser-OS/)
 
 ### updates_
+`14 Nov 2024`
+![riseros](gallery/vga.png)
+
 `12 Nov 2024`
 ![riser_os](gallery/hello.png)
-

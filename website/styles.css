@@ -110,6 +110,7 @@ nav ul li a:hover {
 img{
     height: 400px;
     width: 800px;
+    border-radius: 5px;
 }
 
 /* Mobile View Styles */

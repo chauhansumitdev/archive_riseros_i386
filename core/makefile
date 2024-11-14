@@ -26,7 +26,7 @@ $(GRUB_CFG):
 	mkdir -p $(GRUB_DIR)
 	echo "set timeout=0" > $(GRUB_CFG)
 	echo "set default=0" >> $(GRUB_CFG)
-	echo "menuentry \"My OS\" {" >> $(GRUB_CFG)
+	echo "menuentry \"riseros\" {" >> $(GRUB_CFG)
 	echo "    multiboot /boot/grub/kernel.bin" >> $(GRUB_CFG)
 	echo "    boot" >> $(GRUB_CFG)
 	echo "}" >> $(GRUB_CFG)
