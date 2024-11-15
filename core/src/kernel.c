@@ -56,6 +56,18 @@ void _start() {
         video_memory[(row*80+i)*2] = contact[i];
         video_memory[(row*80+i)*2+1] = 0x09;
     }
+    row++;
 
-    move_cursor(row, 54);
+    const char character = 0xDB;  
+    int color = 0x0F;  
+    for (int i = 0; i < 2; i++) {  
+        for (int j = 0; j < 16; j++) {
+            video_memory[(row * 80 + j) * 2] = character;  
+            video_memory[(row * 80 + j) * 2 + 1] = color; 
+            color = (color + 0x01) % 0x0F;  
+        }
+        row++;  
+    }
+
+    move_cursor(6, 54);
 }
