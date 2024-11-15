@@ -1,10 +1,21 @@
 #include "multiboot.h"
-
 struct multiboot_header multiboot __attribute__((section(".multiboot"))) = {
     MULTIBOOT_HEADER_MAGIC,
     MULTIBOOT_HEADER_FLAGS,
     MULTIBOOT_HEADER_CHECKSUM
 };
+
+void outb(unsigned short port, unsigned char value) {
+    __asm__ volatile("outb %0, %1" : : "a"(value), "Nd"(port));
+}
+
+void move_cursor(int row, int col) {
+    unsigned short position = row * 80 + col;
+    outb(0x3D4, 0x0F); 
+    outb(0x3D5, (unsigned char)(position & 0xFF));  
+    outb(0x3D4, 0x0E);
+    outb(0x3D5, (unsigned char)((position >> 8) & 0xFF));  
+}
 
 void _start() {
     const char *str = "Welcome to riseros_";
@@ -12,7 +23,7 @@ void _start() {
 
     for (int i = 0; i < 11; i++) {  
         video_memory[i * 2] = str[i];
-        video_memory[i * 2 + 1] = 0x07; 
+        video_memory[i * 2 + 1] = 0x0F; 
     }
     for(int i = 11; str[i] != '\0'; i++){
         video_memory[i * 2] = str[i];
@@ -36,5 +47,15 @@ void _start() {
         row++;  
     }
 
-    
+    const char* contact = "Developed by Sumit Chauhan github.com/chauhansumitdev";
+    for(int i = 0; (i < 80) && (i < 13); i++) {
+        video_memory[(row*80+i)*2] = contact[i];
+        video_memory[(row*80+i)*2+1] = 0x07;
+    }
+    for(int i = 13; contact[i] != '\0'; i++) {
+        video_memory[(row*80+i)*2] = contact[i];
+        video_memory[(row*80+i)*2+1] = 0x09;
+    }
+
+    move_cursor(row, 54);
 }

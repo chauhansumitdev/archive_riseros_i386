@@ -11,8 +11,18 @@
 [Everything is documented here! 🔗](https://chauhansumitdev.github.io/riser-OS/)
 
 ### updates_
-`14 Nov 2024`
+`15 Nov 2024`
 ![riseros](gallery/vga.png)
 
 `12 Nov 2024`
 ![riser_os](gallery/hello.png)
+
+
+## todo_
+- [] abstract_vga_colours_etc
+- [] println_impl 
+- [] abstract_vga_screen_disp
+- [] screen_scroll
+- [] err_out
+- [] clear_screen
+- [] text_wrap
