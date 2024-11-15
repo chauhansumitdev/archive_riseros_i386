@@ -11,7 +11,7 @@
 [Everything is documented here! 🔗](https://chauhansumitdev.github.io/riser-OS/)
 
 ## updates_
-### 14 Nov 2024
+### 15 Nov 2024
 
 <img src="gallery/vga.png" alt="riseros" width="800" height="400">
 
