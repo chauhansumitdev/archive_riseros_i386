@@ -56,7 +56,7 @@ void _start() {
         video_memory[(row*80+i)*2] = contact[i];
         video_memory[(row*80+i)*2+1] = 0x09;
     }
-    row++;
+    row+=2;
 
     const char character = 0xDB;  
     int color = 0x0F;  
