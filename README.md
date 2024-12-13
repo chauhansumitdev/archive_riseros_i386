@@ -14,7 +14,7 @@
 ## updates_
 
 ### 13 Dec 2024
-- Global Co-ordinates for cursor : cursor_x , cursor_x, etc.
+- Global co-ordinates for cursor : cursor_row , cursor_col, etc.
 - println(const char *str) implemented.
 - [TODO] Line wrap
 - Decoupled code.
