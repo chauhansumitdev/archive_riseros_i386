@@ -1,25 +1,17 @@
 #include "multiboot.h"
+#include "./global/globals.h"
+#include "./util/util.h"
+#include "./cursor/cursor.h"
+
 struct multiboot_header multiboot __attribute__((section(".multiboot"))) = {
     MULTIBOOT_HEADER_MAGIC,
     MULTIBOOT_HEADER_FLAGS,
     MULTIBOOT_HEADER_CHECKSUM
 };
 
-void outb(unsigned short port, unsigned char value) {
-    __asm__ volatile("outb %0, %1" : : "a"(value), "Nd"(port));
-}
-
-void move_cursor(int row, int col) {
-    unsigned short position = row * 80 + col;
-    outb(0x3D4, 0x0F); 
-    outb(0x3D5, (unsigned char)(position & 0xFF));  
-    outb(0x3D4, 0x0E);
-    outb(0x3D5, (unsigned char)((position >> 8) & 0xFF));  
-}
 
 void _start() {
     const char *str = "Welcome to riseros_";
-    char *video_memory = (char *) 0xb8000;
 
     for (int i = 0; i < 11; i++) {  
         video_memory[i * 2] = str[i];
@@ -70,4 +62,18 @@ void _start() {
     }
 
     move_cursor(6, 54);
+
+    time_delay(); // 5 sec delay -- obvisously system specific :(  temp -- to be rem.
+    
+    clear_screen();
+
+    move_cursor(0,0);
+
+    println("Error_generated ...");
+
+    println("helllooooooooooooooooooooooooooooooooooooooooooo");
+    
+    println("riseros_");
+
+    println(" :) :) :) :) :)");
 }

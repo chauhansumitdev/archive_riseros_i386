@@ -14,12 +14,17 @@ KERNEL_OBJ=$(OBJ_DIR)/kernel.o
 KERNEL_BIN=$(BUILD_DIR)/kernel.bin
 GRUB_CFG=$(GRUB_DIR)/grub.cfg
 
+SRC_FILES=$(shell find $(SRC_DIR) -name "*.c")
+OBJ_FILES=$(SRC_FILES:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+
 all: iso
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	# Create necessary directories under obj before compiling
+	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(BUILD_DIR)/kernel.bin: $(KERNEL_OBJ)
+$(BUILD_DIR)/kernel.bin: $(OBJ_FILES)
 	$(LD) $(LDFLAGS) -o $@ $^
 
 $(GRUB_CFG): 
@@ -31,9 +36,9 @@ $(GRUB_CFG):
 	echo "    boot" >> $(GRUB_CFG)
 	echo "}" >> $(GRUB_CFG)
 
-iso: $(KERNEL_BIN) $(GRUB_CFG)
+iso: $(BUILD_DIR)/kernel.bin $(GRUB_CFG)
 	mkdir -p $(ISO_DIR)/boot/grub
-	cp $(KERNEL_BIN) $(ISO_DIR)/boot/grub/kernel.bin
+	cp $(BUILD_DIR)/kernel.bin $(ISO_DIR)/boot/grub/kernel.bin
 	grub-mkrescue -o $(BUILD_DIR)/os.iso $(ISO_DIR)
 
 clean:

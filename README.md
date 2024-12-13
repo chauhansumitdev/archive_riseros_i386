@@ -1,5 +1,5 @@
 # RiserOS
-![status: 200](https://img.shields.io/badge/status-paused-yellow)
+![status: 200](https://img.shields.io/badge/status-active-green)
 ![status: 200](https://img.shields.io/badge/dev_environment-linux-blue)
 
 
@@ -12,6 +12,14 @@
 [Everything is documented here! 🔗](https://chauhansumitdev.github.io/riser-OS/)
 
 ## updates_
+
+### 13 Dec 2024
+- Global Co-ordinates for cursor : cursor_x , cursor_x, etc.
+- println(const char *str) implemented.
+- [TODO] Line wrap
+- Decoupled code.
+<img src="gallery/println.png" alt="riseros" width="800" height="400">
+
 ### 15 Nov 2024
 
 <img src="gallery/vga.png" alt="riseros" width="800" height="400">
