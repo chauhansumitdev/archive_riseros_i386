@@ -11,6 +11,10 @@ void println(const char *str){
         cursor_col++;
         move_cursor(cursor_row, cursor_col);       
         i++;
+
+        if(cursor_row == 24){ // remove this no hardcoding --
+            cursor_row = 0;
+        }
     }
 
     cursor_row++;

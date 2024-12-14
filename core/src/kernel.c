@@ -1,7 +1,9 @@
+#include <stdint.h>
 #include "multiboot.h"
 #include "./global/globals.h"
 #include "./util/util.h"
 #include "./cursor/cursor.h"
+#include "./assembly/assembly.h"
 
 struct multiboot_header multiboot __attribute__((section(".multiboot"))) = {
     MULTIBOOT_HEADER_MAGIC,
@@ -10,7 +12,7 @@ struct multiboot_header multiboot __attribute__((section(".multiboot"))) = {
 };
 
 
-void _start() {
+void _start(uint32_t multiboot_info_ptr) {
     const char *str = "Welcome to riseros_";
 
     for (int i = 0; i < 11; i++) {  
@@ -60,20 +62,24 @@ void _start() {
         }
         row++;  
     }
-
     move_cursor(6, 54);
-
-    time_delay(); // 5 sec delay -- obvisously system specific :(  temp -- to be rem.
-    
+    time_delay();
     clear_screen();
+    
 
     move_cursor(0,0);
 
-    println("Error_generated ...");
+    println("Checking in protected mode ...");
 
-    println("helllooooooooooooooooooooooooooooooooooooooooooo");
+    if(is_protected_mode()){
+        println("In protected mode --- [OK]");
+    }else{
+        println("In REAL MODE ...");
+    }
+
+    // multiboot_info(multiboot_info_ptr); -- lacks implementation
+
+    // int a = 10/0; -- interrupt check  -- failed -- reboot
+
     
-    println("riseros_");
-
-    println(" :) :) :) :) :)");
 }

@@ -17,10 +17,6 @@
 ## updates_
 
 ### 13 Dec 2024
-- Global co-ordinates for cursor : cursor_row , cursor_col, etc.
-- println(const char *str) implemented.
-- [TODO] Line wrap
-- Decoupled code.
 <img src="gallery/println.png" alt="riseros" width="800" height="400">
 
 ### 15 Nov 2024
