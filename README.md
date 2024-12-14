@@ -3,6 +3,9 @@
 ![status: 200](https://img.shields.io/badge/dev_environment-linux-blue)
 
 
+![Heritage](https://github.com/user-attachments/assets/6069ec40-c21f-4495-a00c-ec0bf94776cc)
+
+
 <!-- ![riser_lang (2)](https://github.com/user-attachments/assets/556eafef-ee33-47fc-a095-f3917c8e3e56) -->
 
 <!-- ![riseros](https://github.com/user-attachments/assets/5ed93375-26ba-4e14-aea2-3c5fde31d186) -->
