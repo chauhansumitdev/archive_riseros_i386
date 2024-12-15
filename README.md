@@ -19,15 +19,15 @@
 <table>
   <tr>
     <td>
-      <img src="gallery/println.png" alt="riseros" width="400" height="200">
+      <img src="gallery/println.png" alt="riseros" >
       <p>13 Dec 2024</p>
     </td>
     <td>
-      <img src="gallery/vga.png" alt="riseros" width="400" height="200">
+      <img src="gallery/vga.png" alt="riseros">
       <p>15 Nov 2024</p>
     </td>
     <td>
-      <img src="gallery/hello.png" alt="riser_os" width="400" height="200">
+      <img src="gallery/hello.png" alt="riser_os" >
       <p>12 Nov 2024</p>
     </td>
   </tr>
