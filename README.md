@@ -3,7 +3,7 @@
 ![status: 200](https://img.shields.io/badge/dev_environment-linux-blue)
 
 
-![Heritage](https://github.com/user-attachments/assets/6069ec40-c21f-4495-a00c-ec0bf94776cc)
+![Heritage](https://github.com/user-attachments/assets/dd99b032-407d-4878-a94e-7c0d434302d9)
 
 
 <!-- ![riser_lang (2)](https://github.com/user-attachments/assets/556eafef-ee33-47fc-a095-f3917c8e3e56) -->
@@ -14,17 +14,23 @@
 
 [Everything is documented here! 🔗](https://chauhansumitdev.github.io/riser-OS/)
 
-## updates_
 
-### 13 Dec 2024
-<img src="gallery/println.png" alt="riseros" width="800" height="400">
-
-### 15 Nov 2024
-
-<img src="gallery/vga.png" alt="riseros" width="800" height="400">
-
-### 12 Nov 2024
-
-<img src="gallery/hello.png" alt="riser_os" width="800" height="400">
+## Updates
+<table>
+  <tr>
+    <td>
+      <img src="gallery/println.png" alt="riseros" >
+      <p>13 Dec 2024</p>
+    </td>
+    <td>
+      <img src="gallery/vga.png" alt="riseros">
+      <p>15 Nov 2024</p>
+    </td>
+    <td>
+      <img src="gallery/hello.png" alt="riser_os" >
+      <p>12 Nov 2024</p>
+    </td>
+  </tr>
+</table>
 
 
