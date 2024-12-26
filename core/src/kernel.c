@@ -4,6 +4,7 @@
 #include "./util/util.h"
 #include "./cursor/cursor.h"
 #include "./assembly/assembly.h"
+#include "./gdt/gdt.h"
 
 struct multiboot_header multiboot __attribute__((section(".multiboot"))) = {
     MULTIBOOT_HEADER_MAGIC,
@@ -77,9 +78,28 @@ void _start(uint32_t multiboot_info_ptr) {
         println("In REAL MODE ...");
     }
 
+    // TODO --
     // multiboot_info(multiboot_info_ptr); -- lacks implementation
 
     // int a = 10/0; -- interrupt check  -- failed -- reboot
+
+
+    // ******************************************************
+    // impl gdt --> below
+
+    set_gdt_entry(0, 0, 0, 0, 0);  
+    set_gdt_entry(1, 0, 0xFFFFFFFF, 0x9A, 0xCF); 
+    set_gdt_entry(2, 0, 0xFFFFFFFF, 0x92, 0xCF);  
+    load_gdt();
+    refresh_registers();
+
+    //******************************************* */
+
+    if(is_protected_mode()){
+        println("In protected mode --- [OK]");
+    }else{
+        println("In REAL MODE ...");
+    }
 
     
 }
