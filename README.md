@@ -17,6 +17,12 @@
 
 ## Updates
 <table>
+<tr>
+    <td>
+      <img src="gallery/interrupt.png" alt="riseros" >
+      <p>28 Dec 2024</p>
+    </td>
+  </tr>
   <tr>
     <td>
       <img src="gallery/println.png" alt="riseros" >

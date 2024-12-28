@@ -5,6 +5,8 @@
 #include "./cursor/cursor.h"
 #include "./assembly/assembly.h"
 #include "./gdt/gdt.h"
+#include "./idt/idt.h"
+#include "./interrupts/interrupts.h"
 
 struct multiboot_header multiboot __attribute__((section(".multiboot"))) = {
     MULTIBOOT_HEADER_MAGIC,
@@ -70,13 +72,18 @@ void _start(uint32_t multiboot_info_ptr) {
 
     move_cursor(0,0);
 
-    println("Checking in protected mode ...");
 
-    if(is_protected_mode()){
-        println("In protected mode --- [OK]");
-    }else{
-        println("In REAL MODE ...");
-    }
+
+
+    // ******************** after boot protected mode check ****
+
+    // println("Checking in protected mode ...");
+
+    // if(is_protected_mode()){
+    //     println("In protected mode --- [OK]");
+    // }else{
+    //     println("In REAL MODE ...");
+    // }
 
     // TODO --
     // multiboot_info(multiboot_info_ptr); -- lacks implementation
@@ -90,16 +97,27 @@ void _start(uint32_t multiboot_info_ptr) {
     set_gdt_entry(0, 0, 0, 0, 0);  
     set_gdt_entry(1, 0, 0xFFFFFFFF, 0x9A, 0xCF); 
     set_gdt_entry(2, 0, 0xFFFFFFFF, 0x92, 0xCF);  
+    set_gdt_entry(3, 0, 0xFFFFFFFF, 0x92, 0xCF);
     load_gdt();
     refresh_registers();
 
     //******************************************* */
+    // ****** after gdt protected mode check ********
 
     if(is_protected_mode()){
         println("In protected mode --- [OK]");
     }else{
         println("In REAL MODE ...");
     }
+
+    // ******** setting up idt ********
+
+    setup_idt();
+
+    // ****** testing interrupt******
+    int a = 10/0;
+
+    // println(" just after division"); -- system HALTED .. does not gets exectured.
 
     
 }

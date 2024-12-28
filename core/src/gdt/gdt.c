@@ -1,6 +1,6 @@
 #include "gdt.h"
 
-struct gdt_entry gdt[3];  // Null, Code, Data -- three entries for now :)
+struct gdt_entry gdt[4];  // Null, Code, Data, Stack -- four entries now :)
 struct gdt_descriptor gdtr;
 
 void set_gdt_entry(int index, uint32_t base, uint32_t limit, uint8_t access, uint8_t granularity) {
@@ -26,7 +26,9 @@ void refresh_registers() {
         "mov %ax, %es\n"
         "mov %ax, %fs\n"
         "mov %ax, %gs\n"
+        "mov $0x18, %ax\n"  
         "mov %ax, %ss\n"
+        "mov $0x08, %ax\n"  
         "jmp $0x08, $flush\n"  
         "flush:\n"
     );

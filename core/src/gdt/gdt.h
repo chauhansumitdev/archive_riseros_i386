@@ -17,7 +17,7 @@ struct gdt_descriptor {
     uint32_t base;
 } __attribute__((packed));
 
-extern struct gdt_entry gdt[3];  
+extern struct gdt_entry gdt[4];  
 extern struct gdt_descriptor gdtr;
 
 void set_gdt_entry(int index, uint32_t base, uint32_t limit, uint8_t access, uint8_t granularity);
