@@ -1,16 +1,12 @@
-# RiserOS
+# riseros_
 ![status: 200](https://img.shields.io/badge/status-active-green)
 ![status: 200](https://img.shields.io/badge/dev_environment-linux-blue)
-
-
-![Heritage](https://github.com/user-attachments/assets/dd99b032-407d-4878-a94e-7c0d434302d9)
-
 
 <!-- ![riser_lang (2)](https://github.com/user-attachments/assets/556eafef-ee33-47fc-a095-f3917c8e3e56) -->
 
 <!-- ![riseros](https://github.com/user-attachments/assets/5ed93375-26ba-4e14-aea2-3c5fde31d186) -->
 
-> Test command - qemu-system-i386 -cdrom build/os.iso
+> Test command - ./core/qemu-system-i386 -cdrom build/os.iso
 
 [Everything is documented here! 🔗](https://chauhansumitdev.github.io/riser-OS/)
 
