@@ -117,7 +117,8 @@ void _start(uint32_t multiboot_info_ptr) {
     // ****** testing interrupt******
     int a = 10/0;
 
-    // println(" just after division"); -- system HALTED .. does not gets exectured.
+     println(" just after division");
+    // -- system HALTED .. does not gets exectured.
 
     
 }
