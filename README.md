@@ -1,6 +1,7 @@
 # riseros_
-![status: 200](https://img.shields.io/badge/status-active-green)
-![status: 200](https://img.shields.io/badge/dev_environment-linux-blue)
+![status: ended](https://img.shields.io/badge/status-ended-white)
+![status: env](https://img.shields.io/badge/dev_environment-linux-blue)
+- This project is being upgraded to 64 bit version , active project here - https://github.com/chauhansumitdev/riser-os
 
 <!-- ![riser_lang (2)](https://github.com/user-attachments/assets/556eafef-ee33-47fc-a095-f3917c8e3e56) -->
 
@@ -34,7 +35,3 @@
     </td>
   </tr>
 </table>
-
-
-# archive_riseros_i386
-# archive_riseros_i386
